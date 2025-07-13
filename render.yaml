@@ -3,7 +3,7 @@ services:
     name: sugarizer-server
     env: node
     plan: starter
-    buildCommand: npm install
+    buildCommand: git clone https://github.com/llaske/sugarizer.git && npm install
     startCommand: node start.js
     envVars:
       - key: NODE_ENV
