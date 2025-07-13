@@ -1,0 +1,17 @@
+services:
+  - type: web
+    name: sugarizer-server
+    env: node
+    plan: starter
+    buildCommand: npm install
+    startCommand: node start.js
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: PORT
+        value: 8080
+
+databases:
+  - name: sugarizer-mongodb
+    databaseName: sugarizer
+    user: sugarizer
